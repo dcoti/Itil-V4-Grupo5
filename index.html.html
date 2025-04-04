@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Resumen ITIL v4</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f6fc;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #004080;
+      text-align: center;
+    }
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 10px;
+    }
+    .tab-button {
+      background-color: #cce0ff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .tab-button.active {
+      background-color: #004080;
+      color: white;
+    }
+    .tab-content {
+      display: none;
+      margin-top: 25px;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    .box {
+      background-color: #eef3fa;
+      border-left: 6px solid #004080;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #004080;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Resumen General de ITIL v4</h1>
+
+    <div class="tabs">
+      <button class="tab-button active" onclick="showTab('general')">📘 General</button>
+      <button class="tab-button" onclick="showTab('dimension1')">👥 Org. y Personas</button>
+      <button class="tab-button" onclick="showTab('dimension2')">💻 Información y Tecnología</button>
+      <button class="tab-button" onclick="showTab('dimension3')">🤝 Socios y Proveedores</button>
+      <button class="tab-button" onclick="showTab('dimension4')">🔄 Flujos de Valor</button>
+      <button class="tab-button" onclick="showTab('grupo5')">📑 Grupo 5</button>
+    </div>
+
+    <div id="general" class="tab-content active">
+      <div class="box">
+        <h2>Sistema de Valor del Servicio (SVS)</h2>
+        <p>ITIL v4 propone un modelo operativo flexible y holístico para la creación, entrega y mejora continua del valor en los servicios tecnológicos.</p>
+        <ul>
+          <li><strong>Principios guía:</strong> Recomendaciones generales para tomar decisiones.</li>
+          <li><strong>Gobernanza:</strong> Dirección y control organizacional.</li>
+          <li><strong>Cadena de valor del servicio:</strong> Flujo de actividades para entregar valor.</li>
+          <li><strong>Mejora continua:</strong> Evaluación constante para evolucionar.</li>
+          <li><strong>Prácticas:</strong> Capacidades específicas adaptadas a los contextos.</li>
+        </ul>
+      </div>
+      <div style="overflow-x: auto; margin-top: 20px;">
+        <!-- SVG Diagram Inserted -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+          <rect width="800" height="600" fill="#f8f9fa" rx="10" ry="10"/>
+          <text x="400" y="60" font-family="Arial" font-size="28" font-weight="bold" text-anchor="middle" fill="#333">ITIL v4 - Diagrama General</text>
+          <circle cx="400" cy="270" r="150" fill="#5b9bd5" fill-opacity="0.2" stroke="#5b9bd5" stroke-width="2"/>
+          <text x="400" y="270" font-family="Arial" font-size="22" font-weight="bold" text-anchor="middle" fill="#333">Sistema de Valor del Servicio</text>
+          <text x="400" y="300" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">Propósito: Crear valor a través</text>
+          <text x="400" y="325" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">de servicios de calidad</text>
+          <rect x="100" y="100" width="200" height="120" rx="10" ry="10" fill="#70ad47" fill-opacity="0.2" stroke="#70ad47" stroke-width="2"/>
+          <text x="200" y="130" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#333">Organizaciones y Personas</text>
+          <text x="200" y="160" font-family="Arial" font-size="14" text-anchor="middle" fill="#555">• Estructura organizativa</text>
+          <text x="200" y="185" font-family="Arial" font-size="14" text-anchor="middle" fill="#555">• Roles y responsabilidades</text>
+          <text x="200" y="210" font-family="Arial" font-size="14" text-anchor="middle" fill="#555">• Competencias y habilidades</text>
+          <rect x="500" y="100" width="200" height="120" rx="10" ry="10" fill="#ed7d31" fill-opacity="0.2" stroke="#ed7d31" stroke-width="2"/>
+          <text x="600" y="130" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#333">Información y Tecnología</text>
+          <text x="600" y="160" font-family="Arial" font-size="14" text-anchor="middle" fill="#555">• Sistemas de información</text>
+          <text x="600" y="185" font-family="Arial" font-size="14" text-anchor="middle" fill="#555">• Flujos de conocimiento</text>
+          <text x="600" y="210" font-family="Arial" font-size="14" text-anchor="middle" fill="#555">• Gestión de la tecnología</text>
+          <rect x="100" y="380" width="200" height="120" rx="10" ry="10" fill="#ffc000" fill-opacity="0.2" stroke="#ffc000" stroke-width="2"/>
+          <text x="200" y="410" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#333">Socios y Proveedores</text>
+          <text x="200" y="440" font-family="Arial" font-size="14" text-anchor="middle" fill="#555">• Relaciones estratégicas</text>
+          <text x="200" y="465" font-family="Arial" font-size="14" text-anchor="middle" fill="#555">• Contratos y acuerdos</text>
+          <text x="200" y="490" font-family="Arial" font-size="14" text-anchor="middle" fill="#555">• Gestión de proveedores</text>
+          <rect x="500" y="380" width="200" height="120" rx="10" ry="10" fill="#4472c4" fill-opacity="0.2" stroke="#4472c4" stroke-width="2"/>
+          <text x="600" y="410" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#333">Flujo de Valor y Procesos</text>
+          <text x="600" y="440" font-family="Arial" font-size="14" text-anchor="middle" fill="#555">• Cadena de valor</text>
+          <text x="600" y="465" font-family="Arial" font-size="14" text-anchor="middle" fill="#555">• Actividades y workflows</text>
+          <text x="600" y="490" font-family="Arial" font-size="14" text-anchor="middle" fill="#555">• Mejora continua</text>
+          <line x1="200" y1="220" x2="325" y2="270" stroke="#70ad47" stroke-width="2"/>
+          <line x1="600" y1="220" x2="475" y2="270" stroke="#ed7d31" stroke-width="2"/>
+          <line x1="200" y1="380" x2="325" y2="320" stroke="#ffc000" stroke-width="2"/>
+          <line x1="600" y1="380" x2="475" y2="320" stroke="#4472c4" stroke-width="2"/>
+          <text x="400" y="550" font-family="Arial" font-size="16" font-style="italic" text-anchor="middle" fill="#777">
+            Las 4 dimensiones trabajan juntas para crear y entregar valor a través de servicios.
+          </text>
+        </svg>
+      </div>
+    </div>
+
+    <div id="grupo5" class="tab-content">
+      <h2>Prácticas Clave - Grupo 5</h2>
+      <p>Resumen del propósito y conceptos clave de prácticas esenciales en ITIL v4 orientadas a relaciones y servicios.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Práctica</th>
+            <th>Propósito</th>
+            <th>Conceptos clave</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Gestión de relaciones</strong></td>
+            <td>Establecer y fomentar relaciones colaborativas entre la organización y sus partes interesadas.</td>
+            <td>
+              <ul>
+                <li>Comunicación continua</li>
+                <li>Empatía y entendimiento mutuo</li>
+                <li>Confianza y cooperación</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Gestión financiera de servicios</strong></td>
+            <td>Garantizar una financiación adecuada y el uso eficiente de los recursos financieros para la entrega de servicios.</td>
+            <td>
+              <ul>
+                <li>Presupuestación</li>
+                <li>Contabilidad del servicio</li>
+                <li>Asignación de costos y recuperación</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Gestión de entrega</strong></td>
+            <td>Asegurar que los servicios se entreguen conforme a los requisitos acordados y que generen valor.</td>
+            <td>
+              <ul>
+                <li>Niveles de servicio</li>
+                <li>Experiencia del usuario</li>
+                <li>Continuidad y confiabilidad</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Gestión de proveedores</strong></td>
+            <td>Obtener valor de los proveedores mediante relaciones adecuadas y supervisión efectiva del rendimiento.</td>
+            <td>
+              <ul>
+                <li>Evaluación y selección</li>
+                <li>Contratos y SLAs</li>
+                <li>Colaboración y mejora mutua</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    
+<div class="tabs" style="margin-top: 10px;">
+  <button class="tab-button active" onclick="showTab('grupo5-tab1')">💬 Gestión de relaciones</button>
+  <button class="tab-button" onclick="showTab('grupo5-tab2')">💰 Gestión financiera</button>
+  <button class="tab-button" onclick="showTab('grupo5-tab3')">📦 Gestión de entrega</button>
+  <button class="tab-button" onclick="showTab('grupo5-tab4')">🤝 Gestión de proveedores</button>
+</div>
+
+<div id="grupo5-tab1" class="tab-content active">
+  <h3>Gestión de Relaciones</h3>
+  <p>Esta práctica se enfoca en la creación y mantenimiento de relaciones efectivas y confiables entre la organización y sus partes interesadas. Su objetivo es fomentar la colaboración y el entendimiento mutuo.</p>
+  <ul>
+    <li><strong>Objetivos:</strong> generar confianza, facilitar la cooperación, asegurar la alineación entre necesidades y servicios.</li>
+    <li><strong>Actividades clave:</strong> reuniones estratégicas, encuestas de satisfacción, gestión de expectativas, monitoreo de relaciones clave.</li>
+    <li><strong>Beneficio:</strong> fortalece el enfoque centrado en el cliente.</li>
+  </ul>
+</div>
+
+<div id="grupo5-tab2" class="tab-content">
+  <h3>Gestión Financiera de Servicios</h3>
+  <p>Busca gestionar los recursos financieros con responsabilidad, garantizando que la inversión en servicios esté alineada con el valor entregado al negocio.</p>
+  <ul>
+    <li><strong>Componentes:</strong> presupuestación, contabilidad del servicio, recuperación de costos.</li>
+    <li><strong>Concepto clave:</strong> transparencia financiera para la toma de decisiones.</li>
+    <li><strong>Relación con otras prácticas:</strong> estrechamente ligada con la estrategia, gestión de portafolio y niveles de servicio.</li>
+  </ul>
+</div>
+
+<div id="grupo5-tab3" class="tab-content">
+  <h3>Gestión de Entrega</h3>
+  <p>También conocida como gestión del nivel de servicio, garantiza que los servicios sean entregados en base a los acuerdos pactados, monitoreando su cumplimiento y promoviendo mejoras.</p>
+  <ul>
+    <li><strong>Instrumentos:</strong> SLAs, OLAs, KPIs de desempeño.</li>
+    <li><strong>Concepto clave:</strong> experiencia del usuario y entrega efectiva.</li>
+    <li><strong>Retos:</strong> adaptación a entornos híbridos y dinámicos.</li>
+  </ul>
+</div>
+
+<div id="grupo5-tab4" class="tab-content">
+  <h3>Gestión de Proveedores</h3>
+  <p>Se encarga de asegurar que los servicios prestados por terceros cumplan con los estándares requeridos y aporten valor a la organización.</p>
+  <ul>
+    <li><strong>Fases:</strong> evaluación, selección, contratación, monitoreo y renovación.</li>
+    <li><strong>Relación clave:</strong> colaboración estratégica y mejora mutua.</li>
+    <li><strong>Herramientas comunes:</strong> matriz RACI, análisis de riesgos, reuniones de revisión de desempeño.</li>
+  </ul>
+</div>
+
+</div>
+  </div>
+  <script>
+    
+    const allButtons = document.querySelectorAll('.tab-button');
+    const allContents = document.querySelectorAll('.tab-content');
+
+    allButtons.forEach(button => {
+      button.addEventListener('click', function (event) {
+        const tabId = this.getAttribute('onclick').match(/'(.*?)'/)[1];
+        const parent = this.closest('.container');
+        const groupTabs = parent.querySelectorAll('.tab-button');
+        const groupContents = parent.querySelectorAll('.tab-content');
+
+        groupTabs.forEach(btn => btn.classList.remove('active'));
+        groupContents.forEach(cnt => cnt.classList.remove('active'));
+
+        this.classList.add('active');
+        parent.querySelector('#' + tabId).classList.add('active');
+      });
+    });
+
+    function showTab(tabId) {
+      const buttons = document.querySelectorAll('.tab-button');
+      const contents = document.querySelectorAll('.tab-content');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      contents.forEach(content => content.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>
