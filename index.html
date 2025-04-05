@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <title>Resumen ITIL v4</title>
@@ -11,18 +11,21 @@
       margin: 0;
       padding: 0;
     }
+
     .container {
       max-width: 1100px;
       margin: 40px auto;
       background-color: #fff;
       padding: 25px;
       border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
+
     h1 {
       color: #004080;
       text-align: center;
     }
+
     .tabs {
       display: flex;
       flex-wrap: wrap;
@@ -30,6 +33,7 @@
       margin-top: 20px;
       gap: 10px;
     }
+
     .tab-button {
       background-color: #cce0ff;
       border: none;
@@ -38,43 +42,58 @@
       cursor: pointer;
       font-weight: bold;
     }
+
     .tab-button.active {
       background-color: #004080;
       color: white;
     }
+
     .tab-content {
       display: none;
       margin-top: 25px;
     }
+
     .tab-content.active {
       display: block;
     }
+
     .box {
       background-color: #eef3fa;
       border-left: 6px solid #004080;
       padding: 15px;
       margin-bottom: 20px;
       border-radius: 5px;
+      transition: transform 0.3s ease;
     }
+
+    .box:hover {
+      transform: scale(1.05);
+      /* Escala al 120% */
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 15px;
     }
-    th, td {
+
+    th,
+    td {
       border: 1px solid #ccc;
       padding: 12px;
       text-align: left;
     }
+
     th {
       background-color: #004080;
       color: white;
     }
   </style>
 </head>
+
 <body>
   <div class="container">
-    <h1>Resumen General de ITIL v4</h1>
+    <h1>ITIL v4</h1>
 
     <div class="tabs">
       <button class="tab-button active" onclick="showTab('general')">📘 General</button>
@@ -84,446 +103,593 @@
       <button class="tab-button" onclick="showTab('dimension4')">🔄 Flujos de Valor</button>
     </div>
 
+    <!--   <h1>GRUPO 5 </h1> -->
+
+    <div class="tabs">
+      <button class="tab-button" onclick="showTab('dimension5')">👥 Gestión de Relaciones</button>
+      <button class="tab-button" onclick="showTab('dimension6')">💵 Gestión Financiera </button>
+      <button class="tab-button" onclick="showTab('dimension7')">📨 Gestión de Entrega</button>
+      <button class="tab-button" onclick="showTab('dimension8')">📊 Gestión de Proveedores</button>
+    </div>
+
     <div id="general" class="tab-content active">
 
-        <div class="box">
-    <h2>¿Qué es ITIL?</h2>
-    <p><strong>ITIL</strong> (Information Technology Infrastructure Library) es un conjunto de buenas prácticas para la gestión de servicios de tecnología de la información (TI). Fue desarrollado para ayudar a las organizaciones a ofrecer servicios de TI de manera más eficiente, alineados con las necesidades del negocio y tiene como fin último la creación de valor a la empresa.</p>
-  </div>
+      <div class="box">
+        <h2>¿Qué es ITIL?</h2>
+        <p><strong>ITIL</strong> (Information Technology Infrastructure Library) es un conjunto de buenas prácticas para
+          la gestión de servicios de tecnología de la información (TI). Fue desarrollado para ayudar a las
+          organizaciones a ofrecer servicios de TI de manera más eficiente, alineados con las necesidades del negocio y
+          tiene como fin último la creación de valor a la empresa.</p>
+      </div>
 
-<div class="box">
-  <h2>Información Clave sobre ITIL</h2>
-  <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
-    <thead>
-      <tr>
-        <th style="background-color: #004080; color: white; padding: 10px; text-align: left;">Aspecto</th>
-        <th style="background-color: #004080; color: white; padding: 10px; text-align: left;">Descripción</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="border: 1px solid #ccc; padding: 10px;">🌐 <strong>¿Qué busca ITIL?</strong></td>
-        <td style="border: 1px solid #ccc; padding: 10px;">
-          <ul style="margin: 0; padding-left: 20px;">
-            <li>Mejorar la calidad del servicio</li>
-            <li>Reducir costos operativos</li>
-            <li>Alinear TI con los objetivos de la empresa</li>
-            <li>Gestionar riesgos y cambios de forma ordenada</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td style="border: 1px solid #ccc; padding: 10px;">🧩 <strong>¿Qué incluye ITIL?</strong></td>
-        <td style="border: 1px solid #ccc; padding: 10px;">
-          ITIL se organiza en un ciclo de vida del servicio, que abarca cinco fases:
-          <ul style="margin: 0; padding-left: 20px;">
-            <li><strong>Estrategia del Servicio:</strong> define el valor que los servicios aportan al negocio.</li>
-            <li><strong>Diseño del Servicio:</strong> se enfoca en cómo diseñar los servicios TI para cumplir con las necesidades.</li>
-            <li><strong>Transición del Servicio:</strong> gestiona los cambios, lanzamientos y pruebas.</li>
-            <li><strong>Operación del Servicio:</strong> se encarga del soporte diario, como incidencias y peticiones.</li>
-            <li><strong>Mejora Continua del Servicio:</strong> busca optimizar constantemente los servicios ofrecidos.</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td style="border: 1px solid #ccc; padding: 10px;">🧠 <strong>¿Por qué es importante?</strong></td>
-        <td style="border: 1px solid #ccc; padding: 10px;">
-          ITIL es ampliamente usado en empresas de todo el mundo porque proporciona un lenguaje común y procesos estándarizados que:
-          <ul style="margin: 0; padding-left: 20px;">
-            <li>Mejoran la comunicación entre equipos.</li>
-            <li>Incrementan la satisfacción del cliente.</li>
-            <li>Facilitan auditorías y cumplimiento regulatorio.</li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+      <div class="box">
+        <h2>Información Clave sobre ITIL</h2>
+        <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+          <thead>
+            <tr>
+              <th style="background-color: #004080; color: white; padding: 10px; text-align: left;">Aspecto</th>
+              <th style="background-color: #004080; color: white; padding: 10px; text-align: left;">Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="border: 1px solid #ccc; padding: 10px;">🌐 <strong>¿Qué busca ITIL?</strong></td>
+              <td style="border: 1px solid #ccc; padding: 10px;">
+                <ul style="margin: 0; padding-left: 20px;">
+                  <li>Mejorar la calidad del servicio</li>
+                  <li>Reducir costos operativos</li>
+                  <li>Alinear TI con los objetivos de la empresa</li>
+                  <li>Gestionar riesgos y cambios de forma ordenada</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #ccc; padding: 10px;">🧩 <strong>¿Qué incluye ITIL?</strong></td>
+              <td style="border: 1px solid #ccc; padding: 10px;">
+                ITIL se organiza en un ciclo de vida del servicio, que abarca cinco fases:
+                <ul style="margin: 0; padding-left: 20px;">
+                  <li><strong>Estrategia del Servicio:</strong> define el valor que los servicios aportan al negocio.
+                  </li>
+                  <li><strong>Diseño del Servicio:</strong> se enfoca en cómo diseñar los servicios TI para cumplir con
+                    las necesidades.</li>
+                  <li><strong>Transición del Servicio:</strong> gestiona los cambios, lanzamientos y pruebas.</li>
+                  <li><strong>Operación del Servicio:</strong> se encarga del soporte diario, como incidencias y
+                    peticiones.</li>
+                  <li><strong>Mejora Continua del Servicio:</strong> busca optimizar constantemente los servicios
+                    ofrecidos.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #ccc; padding: 10px;">🧠 <strong>¿Por qué es importante?</strong></td>
+              <td style="border: 1px solid #ccc; padding: 10px;">
+                ITIL es ampliamente usado en empresas de todo el mundo porque proporciona un lenguaje común y procesos
+                estándarizados que:
+                <ul style="margin: 0; padding-left: 20px;">
+                  <li>Mejoran la comunicación entre equipos.</li>
+                  <li>Incrementan la satisfacción del cliente.</li>
+                  <li>Facilitan auditorías y cumplimiento regulatorio.</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-<div class="box">
-  <h2>📚 ¿Qué es ITIL v4?</h2>
-  <p><strong>ITIL v4</strong> fue lanzado en 2019 y representa una evolución significativa respecto a versiones anteriores (como ITIL v3). Esta versión busca adaptarse mejor a los entornos actuales donde predominan la agilidad, el DevOps, la transformación digital y la experiencia del cliente.</p>
-  <p>En lugar de enfocarse solo en procesos, ITIL v4 toma un enfoque más holístico y flexible, permitiendo a las organizaciones adaptarse más fácilmente a un entorno cambiante.</p>
-</div>
-     
-      <div style="overflow-x: auto; margin-top: 20px;">
-        <!-- SVG Diagram Inserted -->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
-          <rect width="800" height="600" fill="#f8f9fa" rx="10" ry="10"/>
-          <text x="400" y="60" font-family="Arial" font-size="28" font-weight="bold" text-anchor="middle" fill="#333">ITIL v4 - Diagrama General</text>
-          <circle cx="400" cy="270" r="150" fill="#5b9bd5" fill-opacity="0.2" stroke="#5b9bd5" stroke-width="2"/>
-          <text x="400" y="270" font-family="Arial" font-size="22" font-weight="bold" text-anchor="middle" fill="#333">Sistema de Valor del Servicio</text>
-          <text x="400" y="300" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">Propósito: Crear valor a través</text>
-          <text x="400" y="325" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">de servicios de calidad</text>
-          <rect x="100" y="100" width="200" height="120" rx="10" ry="10" fill="#70ad47" fill-opacity="0.2" stroke="#70ad47" stroke-width="2"/>
-          <text x="200" y="130" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#333">Organizaciones y Personas</text>
-          <text x="200" y="160" font-family="Arial" font-size="14" text-anchor="middle" fill="#555">• Estructura organizativa</text>
-          <text x="200" y="185" font-family="Arial" font-size="14" text-anchor="middle" fill="#555">• Roles y responsabilidades</text>
-          <text x="200" y="210" font-family="Arial" font-size="14" text-anchor="middle" fill="#555">• Competencias y habilidades</text>
-          <rect x="500" y="100" width="200" height="120" rx="10" ry="10" fill="#ed7d31" fill-opacity="0.2" stroke="#ed7d31" stroke-width="2"/>
-          <text x="600" y="130" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#333">Información y Tecnología</text>
-          <text x="600" y="160" font-family="Arial" font-size="14" text-anchor="middle" fill="#555">• Sistemas de información</text>
-          <text x="600" y="185" font-family="Arial" font-size="14" text-anchor="middle" fill="#555">• Flujos de conocimiento</text>
-          <text x="600" y="210" font-family="Arial" font-size="14" text-anchor="middle" fill="#555">• Gestión de la tecnología</text>
-          <rect x="100" y="380" width="200" height="120" rx="10" ry="10" fill="#ffc000" fill-opacity="0.2" stroke="#ffc000" stroke-width="2"/>
-          <text x="200" y="410" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#333">Socios y Proveedores</text>
-          <text x="200" y="440" font-family="Arial" font-size="14" text-anchor="middle" fill="#555">• Relaciones estratégicas</text>
-          <text x="200" y="465" font-family="Arial" font-size="14" text-anchor="middle" fill="#555">• Contratos y acuerdos</text>
-          <text x="200" y="490" font-family="Arial" font-size="14" text-anchor="middle" fill="#555">• Gestión de proveedores</text>
-          <rect x="500" y="380" width="200" height="120" rx="10" ry="10" fill="#4472c4" fill-opacity="0.2" stroke="#4472c4" stroke-width="2"/>
-          <text x="600" y="410" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#333">Flujo de Valor y Procesos</text>
-          <text x="600" y="440" font-family="Arial" font-size="14" text-anchor="middle" fill="#555">• Cadena de valor</text>
-          <text x="600" y="465" font-family="Arial" font-size="14" text-anchor="middle" fill="#555">• Actividades y workflows</text>
-          <text x="600" y="490" font-family="Arial" font-size="14" text-anchor="middle" fill="#555">• Mejora continua</text>
-          <line x1="200" y1="220" x2="325" y2="270" stroke="#70ad47" stroke-width="2"/>
-          <line x1="600" y1="220" x2="475" y2="270" stroke="#ed7d31" stroke-width="2"/>
-          <line x1="200" y1="380" x2="325" y2="320" stroke="#ffc000" stroke-width="2"/>
-          <line x1="600" y1="380" x2="475" y2="320" stroke="#4472c4" stroke-width="2"/>
-          <text x="400" y="550" font-family="Arial" font-size="16" font-style="italic" text-anchor="middle" fill="#777">
-            Las 4 dimensiones trabajan juntas para crear y entregar valor a través de servicios.
-          </text>
-        </svg>
+      <div class="box">
+        <h2>📚 ¿Qué es ITIL v4?</h2>
+        <p><strong>ITIL v4</strong> fue lanzado en 2019 y representa una evolución significativa respecto a versiones
+          anteriores (como ITIL v3). Esta versión busca adaptarse mejor a los entornos actuales donde predominan la
+          agilidad, el DevOps, la transformación digital y la experiencia del cliente.</p>
+        <p>En lugar de enfocarse solo en procesos, ITIL v4 toma un enfoque más holístico y flexible, permitiendo a las
+          organizaciones adaptarse más fácilmente a un entorno cambiante.</p>
+      </div>
+
+      <div>
+        <img src="./img/Diagrama General v4.png" alt="">
       </div>
     </div>
 
-<div id="dimension4" class="tab-content">
-        <h2>🔄 Flujo de Valor (Value Stream) en ITIL v4</h2>
-    <div class="box">
+    <div id="dimension1" class="tab-content">
+      <h2>👥 Org. y Personas</h2>
+      <div class="box">
+        <p>
+          La dimensión de Organizaciones y Personas es una de las cuatro dimensiones fundamentales que ITIL 4 propone
+          para lograr una gestión de servicios de TI sólida y efectiva. Esta dimensión va más allá de la estructura
+          formal de la compañía; se centra en la cultura, la comunicación, las competencias y la mentalidad de todas las
+          personas involucradas en la cadena de valor de servicios.
+        </p>
+      </div>
+      <div class="box">
+        <h3>
+          Estructura organizativa
+        </h3>
+        <p>
+          Define cómo se organizan los equipos y departamentos para llevar a cabo las funciones y responsabilidades
+          dentro de la gestión de servicios. En este ámbito, es clave designar roles claros, delimitar la autoridad de
+          cada puesto y establecer mecanismos de colaboración para evitar duplicidades o cuellos de botella.
+        </p>
+      </div>
+      <div class="box">
+        <h3>
+          Cultura organizacional
+        </h3>
+        <p>
+          Engloba los valores, comportamientos y normas compartidas que guían el modo en que las personas trabajan y se
+          relacionan. Una cultura de servicio favorece la colaboración, la apertura al cambio y la retroalimentación,
+          permitiendo que todos entiendan el propósito de su labor y cómo contribuyen al valor entregado al cliente
+        </p>
+      </div>
+      <div class="box">
+        <h3>
+          Competencias y desarrollo
+        </h3>
+        <p>
+          Se refiere a las habilidades, conocimientos y capacidades que el equipo necesita para cumplir con los
+          objetivos de la organización. Incluye planes de formación técnica y de habilidades blandas (soft skills),
+          evaluación de la capacidad de los equipos y la gestión de la carga de trabajo para que cada persona tenga los
+          recursos necesarios y esté preparada para enfrentar los retos del día a día.
+        </p>
+      </div>
+      <div class="box">
+        <h3>
+          Liderazgo y visión
+        </h3>
+        <p>
+          Aborda el rol de los líderes en establecer una estrategia clara, comunicar objetivos y motivar al personal. El
+          patrocinio ejecutivo y el respaldo a iniciativas de mejora (como la adopción de ITIL) son esenciales para
+          alinear esfuerzos y promover un entorno donde las personas se sientan valoradas y comprometidas con la visión
+          global de la organización.
+        </p>
+      </div>
+      <div class="box">
+        <h3>
+          Relación con otras dimensiones
+        </h3>
+        <ul>
+          <li><strong>Información y Tecnología:</strong> La implementación de nuevas herramientas y sistemas requiere
+            personal capacitado y dispuesto a adoptar cambios.</li>
+          <li><strong>Socios y Proveedores:</strong> Se necesitan habilidades de negociación y manejo de relaciones para
+            alinear a terceros con la estrategia interna.</li>
+          <li><strong>Flujos de Valor y Procesos:</strong> Quienes diseñan, operan y mejoran los procesos son las
+            personas; sin su compromiso y competencias, la creación de valor es limitada.</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>
+          Beneficios de cuidarla
+        </h3>
+        <p>Atender de manera adecuada la dimensión “Organizaciones y Personas” conlleva una mejor experiencia para
+          empleados y clientes, procesos más eficientes y ágiles, y una cultura que facilita la adaptación a cambios.
+          Esto a su vez incrementa la retención de talento y fortalece el compromiso de todos hacia la mejora continua y
+          la creación de valor.</p>
+      </div>
+    </div>
 
-  <p>El flujo de valor representa el camino completo que sigue una necesidad del cliente hasta convertirse en un resultado útil, como un servicio entregado o un producto terminado. En ITIL v4, este concepto se centra en cómo se crea y entrega valor, más allá de las tareas individuales o departamentos.</p>
-  <h3>🔹 ¿Qué incluye un flujo de valor?</h3>
-  <ul>
-    <li>Personas</li>
-    <li>Actividades (tanto manuales como automáticas)</li>
-    <li>Prácticas de ITIL</li>
-    <li>Herramientas</li>
-    <li>Colaboración entre áreas</li>
-  </ul>
-  <p><strong>💬 Ejemplo:</strong> Desde que un usuario reporta una falla hasta que el servicio vuelve a funcionar, todo ese recorrido (reporte, análisis, resolución, comunicación) es parte de un flujo de valor.</p>
-</div>
+    <div id="dimension3" class="tab-content">
+      <h2>🤝 Socios y Proveedores</h2>
+      <div class="box">
+        <p>
+          Se refiere a cómo la organización colabora con entidades externas para ofrecer y mejorar sus servicios.
+          Implica establecer acuerdos claros (contratos y SLAs), definir responsabilidades y asegurarse de que la
+          calidad y los plazos se cumplan.
+        </p>
+        <p>
+          Para ello, hay que gestionar la relación de manera continua (seguimiento, comunicación y evaluación de
+          desempeño), así como coordinar el trabajo de los socios con las capacidades internas, la tecnología y los
+          flujos de valor. Una adecuada gestión de socios y proveedores permite acceder a recursos especializados,
+          reducir costos y garantizar la calidad en la entrega de servicios, contribuyendo directamente a la
+          satisfacción del cliente y al logro de los objetivos de negocio.
+        </p>
+      </div>
+      <div class="box">
+        <h3>Definición y alcance</h3>
+        <p>Se refiere a todas las relaciones que la organización establece con terceros para proveer, apoyar o
+          enriquecer la entrega de servicios. Incluye desde proveedores de software hasta socios estratégicos que
+          colaboran en la creación de valor para los clientes finales.</p>
+        <hr>
 
-<div class="box">
-  <h2>🔑 ¿Qué es el Sistema de Valor del Servicio (SVS)?</h2>
-  <p>El <strong>SVS (Service Value System)</strong> es el corazón de ITIL v4. Describe cómo los componentes y actividades de una organización trabajan juntos para facilitar la creación de valor a través de servicios.</p>
-  <h3>🧱 Componentes del SVS:</h3>
-  <ul>
-    <li><strong>🔑 Principios guía:</strong> Son recomendaciones universales que ayudan en la toma de decisiones.
-      <ul>
-        <li>Ej: "Centrarse en el valor", "Progresar iterativamente con retroalimentación", "Colaborar y promover la visibilidad".</li>
-      </ul>
-    </li>
-    <li><strong>🏛️ Gobernanza:</strong> Asegura que las decisiones estén alineadas con los objetivos estratégicos de la organización.
-      <ul>
-        <li>Involucra liderazgo, políticas y cumplimiento.</li>
-      </ul>
-    </li>
-    <li><strong>⚙️ Cadena de Valor del Servicio (SVC):</strong> Representa el flujo de trabajo para crear, entregar y dar soporte a los servicios.
-      <ul>
-        <li>Incluye seis actividades principales: Planear, Mejorar, Involucrar, Diseñar/Transicionar, Obtener/Construir, Entregar/Soportar.</li>
-      </ul>
-    </li>
-    <li><strong>📈 Mejora Continua:</strong> Modelo cíclico para identificar oportunidades y asegurar mejoras en los servicios y prácticas.
-      <ul>
-        <li>Se enfoca en evaluar constantemente y aplicar acciones correctivas.</li>
-      </ul>
-    </li>
-    <li><strong>🧩 Prácticas (antes “procesos”):</strong> Son capacidades organizacionales que incluyen recursos, roles, herramientas y actividades para llevar a cabo el trabajo.
-      <ul>
-        <li>ITIL v4 define 34 prácticas, entre ellas: Gestión de Incidentes, Gestión de Cambios, Gestión del Conocimiento, entre otras.</li>
-      </ul>
-    </li>
-  </ul>
-</div>
-<div style="display: flex; justify-content: center; align-items: center; margin-top: 20px; margin-bottom: 20px">
-  <svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
-    <!-- Fondo -->
-    <rect width="100%" height="100%" fill="#f4f4f4"/>
+        <h3>Selección y clasificación de socios/proveedores</h3>
+        <p>Las organizaciones deben identificar qué tipo de colaborador o proveedor necesitan (por ejemplo, de
+          infraestructura, desarrollo, consultoría, etc.) y definir criterios para su selección. La clasificación de
+          estos socios puede basarse en el nivel de criticidad, el impacto financiero o la complejidad de la relación.
+        </p>
+        <hr>
 
-    <!-- Título -->
-    <text x="300" y="40" text-anchor="middle" font-size="22" font-family="Arial" fill="#333">
-      Sistema de Valor del Servicio (SVS) - ITIL v4
-    </text>
+        <h3>Contratos y acuerdos de servicio</h3>
+        <p>
+          Implica el establecimiento de contratos y acuerdos de nivel de servicio (SLA) claros, que definan objetivos,
+          responsabilidades, plazos y métricas de desempeño. De esta forma, se reducen las ambigüedades y se asegura que
+          todas las partes tengan expectativas alineadas.
+        </p>
+        <hr>
 
-    <!-- Elementos centrales -->
-    <rect x="180" y="120" width="240" height="80" fill="#3c8dbc" rx="10" ry="10"/>
-    <text x="300" y="165" text-anchor="middle" font-size="16" font-family="Arial" fill="#fff">
-      Cadena de Valor del Servicio
-    </text>
+        <h3>Gestión de la relación</h3>
+        <p>
+          La relación con socios y proveedores va más allá de la firma de un contrato; requiere comunicación continua,
+          evaluación de desempeño y gestión de riesgos. En esta gestión se incluyen:
+        <ul>
+          <li>Seguimiento de la calidad de los entregables.</li>
+          <li>Reuniones de revisión periódicas para identificar mejoras o ajustes necesarios.</li>
+          <li>Resolución de conflictos y escalamiento de problemas cuando sea necesario.</li>
+        </ul>
+        </p>
+        <hr>
 
-    <!-- Otros elementos (alrededor) -->
-    <!-- Principios guía -->
-    <rect x="30" y="80" width="140" height="60" fill="#5cb85c" rx="10" ry="10"/>
-    <text x="100" y="115" text-anchor="middle" font-size="14" font-family="Arial" fill="#fff">
-      Principios Guía
-    </text>
+        <h3>Integración con otras dimensiones</h3>
+        <ul>
+          <li>
+            <strong>Organizaciones y Personas:</strong> Es esencial contar con personal que posea habilidades de
+            negociación, gestión de contratos y capacidad de trabajo colaborativo con entidades externas.
+          </li>
+          <li>
+            <strong>Información y Tecnología:</strong> Muchas veces los socios y proveedores son responsables de
+            suministrar o mantener tecnologías clave, por lo que la alineación en términos de herramientas, plataformas
+            y estándares técnicos es crucial.
+          </li>
+          <li>
+            <strong>Flujos de Valor y Procesos:</strong> Si los procesos de la organización dependen de la entrega de un
+            socio, es indispensable que ambos entiendan y coordinen los flujos de trabajo para garantizar la continuidad
+            del servicio.
+          </li>
+        </ul>
+        <hr>
 
-    <!-- Gobernanza -->
-    <rect x="430" y="80" width="140" height="60" fill="#f0ad4e" rx="10" ry="10"/>
-    <text x="500" y="115" text-anchor="middle" font-size="14" font-family="Arial" fill="#fff">
-      Gobernanza
-    </text>
+        <h3>Riesgos y oportunidades</h3>
+        <ul>
+          <li>
+            <strong>Riesgos: </strong>Dependencia excesiva de un solo proveedor, fallas de entrega, incumplimientos
+            contractuales, problemas de calidad o disponibilidad.
+          </li>
+          <li>
+            <strong>Oportunidades: </strong>Mayor especialización, acceso a nuevas tecnologías o conocimientos,
+            optimización de costos y escalabilidad de recursos.
+          </li>
+        </ul>
+        <hr>
 
-    <!-- Mejora Continua -->
-    <rect x="30" y="250" width="140" height="60" fill="#d9534f" rx="10" ry="10"/>
-    <text x="100" y="285" text-anchor="middle" font-size="14" font-family="Arial" fill="#fff">
-      Mejora Continua
-    </text>
+        <h3>Beneficios de atenderla</h3>
+        <p>
+          Al manejar adecuadamente la relación con socios y proveedores, la organización obtiene ventajas competitivas,
+          mejora la calidad y consistencia de los servicios, y libera recursos internos para enfocarlos en actividades
+          estratégicas. Además, un enfoque estructurado en esta dimensión fomenta la innovación y la adaptación ágil a
+          los cambios del mercado.
+        </p>
 
-    <!-- Prácticas -->
-    <rect x="430" y="250" width="140" height="60" fill="#6f42c1" rx="10" ry="10"/>
-    <text x="500" y="285" text-anchor="middle" font-size="14" font-family="Arial" fill="#fff">
-      Prácticas
-    </text>
+      </div>
+    </div>
 
-    <!-- Flechas -->
-    <defs>
-      <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5"
-              orient="auto" markerUnits="strokeWidth">
-        <path d="M0,0 L0,10 L10,5 z" fill="#333" />
-      </marker>
-    </defs>
+    <div id="dimension4" class="tab-content">
+      <h2>🔄 Flujo de Valor (Value Stream) en ITIL v4</h2>
+      <div class="box">
 
-    <!-- Flechas a Cadena de Valor -->
-    <line x1="170" y1="110" x2="180" y2="140" stroke="#333" stroke-width="2" marker-end="url(#arrow)" />
-    <line x1="430" y1="110" x2="420" y2="140" stroke="#333" stroke-width="2" marker-end="url(#arrow)" />
-    <line x1="170" y1="280" x2="180" y2="200" stroke="#333" stroke-width="2" marker-end="url(#arrow)" />
-    <line x1="430" y1="280" x2="420" y2="200" stroke="#333" stroke-width="2" marker-end="url(#arrow)" />
-  </svg>
-</div>
-<div class="box">
-  <h2>⚙️ Cadena de Valor del Servicio (Service Value Chain)</h2>
-  <p>Dentro del SVS, la Cadena de Valor del Servicio (SVC) es el marco que organiza los flujos de valor. Está formada por 6 actividades que se pueden combinar para construir distintos flujos:</p>
-  <ul>
-    <li>Planear</li>
-    <li>Mejorar</li>
-    <li>Involucrar (Engage)</li>
-    <li>Diseñar y transicionar</li>
-    <li>Obtener y construir</li>
-    <li>Entregar y soportar</li>
-  </ul>
-  <p>Cada actividad es un bloque que puedes encadenar de forma diferente dependiendo del servicio o necesidad.</p>
-</div>
+        <p>El flujo de valor representa el camino completo que sigue una necesidad del cliente hasta convertirse en un
+          resultado útil, como un servicio entregado o un producto terminado. En ITIL v4, este concepto se centra en
+          cómo se crea y entrega valor, más allá de las tareas individuales o departamentos.</p>
+        <h3>🔹 ¿Qué incluye un flujo de valor?</h3>
+        <ul>
+          <li>Personas</li>
+          <li>Actividades (tanto manuales como automáticas)</li>
+          <li>Prácticas de ITIL</li>
+          <li>Herramientas</li>
+          <li>Colaboración entre áreas</li>
+        </ul>
+        <p><strong>💬 Ejemplo:</strong> Desde que un usuario reporta una falla hasta que el servicio vuelve a funcionar,
+          todo ese recorrido (reporte, análisis, resolución, comunicación) es parte de un flujo de valor.</p>
+      </div>
 
-<div class="box">
-  <h2>🧩 Procesos vs Prácticas en ITIL v4</h2>
-  <p>Uno de los cambios clave en ITIL v4 es que ya no se habla solo de procesos, sino de prácticas. Las prácticas son más amplias: incluyen procesos, roles, herramientas y cultura.</p>
-  <h3>🔸 Diferencias clave:</h3>
-  <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
-    <thead>
-      <tr>
-        <th style="background-color: #004080; color: white; padding: 10px;">Concepto</th>
-        <th style="background-color: #004080; color: white; padding: 10px;">ITIL v3</th>
-        <th style="background-color: #004080; color: white; padding: 10px;">Enfoque en ITIL v4</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="border: 1px solid #ccc; padding: 10px;">Procesos vs Prácticas</td>
-        <td style="border: 1px solid #ccc; padding: 10px;">Procesos</td>
-        <td style="border: 1px solid #ccc; padding: 10px;">Prácticas</td>
-      </tr>
-      <tr>
-        <td style="border: 1px solid #ccc; padding: 10px;">Enfoque</td>
-        <td style="border: 1px solid #ccc; padding: 10px;">Paso a paso rígido</td>
-        <td style="border: 1px solid #ccc; padding: 10px;">Adaptabilidad y contexto</td>
-      </tr>
-      <tr>
-        <td style="border: 1px solid #ccc; padding: 10px;">Centrados en</td>
-        <td style="border: 1px solid #ccc; padding: 10px;">Tareas</td>
-        <td style="border: 1px solid #ccc; padding: 10px;">Valor</td>
-      </tr>
-    </tbody>
-  </table>
-  <p><strong>Por ejemplo:</strong></p>
-  <p>La gestión de incidentes ya no es solo un conjunto de pasos para resolver tickets. Ahora es una práctica que incluye la experiencia del usuario, automatización, SLAs, análisis de causa raíz, etc.</p>
-</div>
+      <div class="box">
+        <h2>🔑 ¿Qué es el Sistema de Valor del Servicio (SVS)?</h2>
+        <p>El <strong>SVS (Service Value System)</strong> es el corazón de ITIL v4. Describe cómo los componentes y
+          actividades de una organización trabajan juntos para facilitar la creación de valor a través de servicios.</p>
+        <h3>🧱 Componentes del SVS:</h3>
+        <ul>
+          <li><strong>🔑 Principios guía:</strong> Son recomendaciones universales que ayudan en la toma de decisiones.
+            <ul>
+              <li>Ej: "Centrarse en el valor", "Progresar iterativamente con retroalimentación", "Colaborar y promover
+                la visibilidad".</li>
+            </ul>
+          </li>
+          <li><strong>🏛️ Gobernanza:</strong> Asegura que las decisiones estén alineadas con los objetivos estratégicos
+            de la organización.
+            <ul>
+              <li>Involucra liderazgo, políticas y cumplimiento.</li>
+            </ul>
+          </li>
+          <li><strong>⚙️ Cadena de Valor del Servicio (SVC):</strong> Representa el flujo de trabajo para crear,
+            entregar y dar soporte a los servicios.
+            <ul>
+              <li>Incluye seis actividades principales: Planear, Mejorar, Involucrar, Diseñar/Transicionar,
+                Obtener/Construir, Entregar/Soportar.</li>
+            </ul>
+          </li>
+          <li><strong>📈 Mejora Continua:</strong> Modelo cíclico para identificar oportunidades y asegurar mejoras en
+            los servicios y prácticas.
+            <ul>
+              <li>Se enfoca en evaluar constantemente y aplicar acciones correctivas.</li>
+            </ul>
+          </li>
+          <li><strong>🧩 Prácticas (antes “procesos”):</strong> Son capacidades organizacionales que incluyen recursos,
+            roles, herramientas y actividades para llevar a cabo el trabajo.
+            <ul>
+              <li>ITIL v4 define 34 prácticas, entre ellas: Gestión de Incidentes, Gestión de Cambios, Gestión del
+                Conocimiento, entre otras.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
 
-<div class="box">
-  <h2>✨ Cómo unir todo</h2>
-  <p>ITIL v4 promueve construir flujos de valor usando las prácticas necesarias, organizadas a través de la cadena de valor del servicio. Todo esto ocurre dentro del Sistema de Valor del Servicio, que guía a la organización para entregar valor de forma continua y coherente.</p>
-  <p><strong>🧠 ¿Cómo podrías resumirlo?</strong></p>
-  <blockquote style="background-color: #eef3fa; border-left: 6px solid #004080; padding: 10px; margin: 10px 0;">
-    “ITIL v4 nos invita a dejar de pensar solo en procesos aislados. Nos ayuda a diseñar flujos de valor completos, desde la necesidad del usuario hasta el valor entregado, utilizando prácticas adaptables dentro de un sistema de trabajo colaborativo, flexible y centrado en el valor.”
-  </blockquote>
-</div>
-</div>
+      <img src="./img/Sistema de valor del servicio.jpg" alt="">
+      <!-- <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px; margin-bottom: 20px">
+        
+      </div> -->
+      <div class="box">
+        <h2>⚙️ Cadena de Valor del Servicio (Service Value Chain)</h2>
+        <p>Dentro del SVS, la Cadena de Valor del Servicio (SVC) es el marco que organiza los flujos de valor. Está
+          formada por 6 actividades que se pueden combinar para construir distintos flujos:</p>
+        <ul>
+          <li>Planear</li>
+          <li>Mejorar</li>
+          <li>Involucrar (Engage)</li>
+          <li>Diseñar y transicionar</li>
+          <li>Obtener y construir</li>
+          <li>Entregar y soportar</li>
+        </ul>
+        <p>Cada actividad es un bloque que puedes encadenar de forma diferente dependiendo del servicio o necesidad.</p>
+      </div>
 
-  
+      <div class="box">
+        <h2>🧩 Procesos vs Prácticas en ITIL v4</h2>
+        <p>Uno de los cambios clave en ITIL v4 es que ya no se habla solo de procesos, sino de prácticas. Las prácticas
+          son más amplias: incluyen procesos, roles, herramientas y cultura.</p>
+        <h3>🔸 Diferencias clave:</h3>
+        <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+          <thead>
+            <tr>
+              <th style="background-color: #004080; color: white; padding: 10px;">Concepto</th>
+              <th style="background-color: #004080; color: white; padding: 10px;">ITIL v3</th>
+              <th style="background-color: #004080; color: white; padding: 10px;">Enfoque en ITIL v4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="border: 1px solid #ccc; padding: 10px;">Procesos vs Prácticas</td>
+              <td style="border: 1px solid #ccc; padding: 10px;">Procesos</td>
+              <td style="border: 1px solid #ccc; padding: 10px;">Prácticas</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #ccc; padding: 10px;">Enfoque</td>
+              <td style="border: 1px solid #ccc; padding: 10px;">Paso a paso rígido</td>
+              <td style="border: 1px solid #ccc; padding: 10px;">Adaptabilidad y contexto</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #ccc; padding: 10px;">Centrados en</td>
+              <td style="border: 1px solid #ccc; padding: 10px;">Tareas</td>
+              <td style="border: 1px solid #ccc; padding: 10px;">Valor</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong>Por ejemplo:</strong></p>
+        <p>La gestión de incidentes ya no es solo un conjunto de pasos para resolver tickets. Ahora es una práctica que
+          incluye la experiencia del usuario, automatización, SLAs, análisis de causa raíz, etc.</p>
+      </div>
+
+      <div class="box">
+        <h2>✨ Cómo unir todo</h2>
+        <p>ITIL v4 promueve construir flujos de valor usando las prácticas necesarias, organizadas a través de la cadena
+          de valor del servicio. Todo esto ocurre dentro del Sistema de Valor del Servicio, que guía a la organización
+          para entregar valor de forma continua y coherente.</p>
+        <p><strong>🧠 ¿Cómo podrías resumirlo?</strong></p>
+        <blockquote style="background-color: #eef3fa; border-left: 6px solid #004080; padding: 10px; margin: 10px 0;">
+          “ITIL v4 nos invita a dejar de pensar solo en procesos aislados. Nos ayuda a diseñar flujos de valor
+          completos, desde la necesidad del usuario hasta el valor entregado, utilizando prácticas adaptables dentro de
+          un sistema de trabajo colaborativo, flexible y centrado en el valor.”
+        </blockquote>
+      </div>
+    </div>
+
+
   </div>
 
   <div class="container">
-    <h1>GRUPO 5 </h1>
 
-    <div class="tabs">
-      <button class="tab-button" onclick="showTab('dimension1')">👥 Gestión de Relaciones</button>
-      <button class="tab-button" onclick="showTab('dimension2')">💵 Gestión Financiera </button>
-      <button class="tab-button" onclick="showTab('dimension3')">📨 Gestión de Entrega</button>
-      <button class="tab-button" onclick="showTab('dimension4')">📊 Gestión de Proveedores</button>
+    <div id="dimension5" class="tab-content active">
+
+      <div class="box">
+        <h2>🤝 ¿Qué es la Gestión de Relaciones en ITIL v4?</h2>
+        <h3>🎯 Propósito:</h3>
+        <p>Asegurar que la organización entiende, gestiona y mejora sus relaciones con las partes interesadas adecuadas,
+          tanto internas como externas, para facilitar el valor continuo a través de servicios y colaboraciones
+          eficaces.</p>
+
+        <h3>🔑 Conceptos clave:</h3>
+        <ul>
+          <li><strong>1. Partes interesadas (Stakeholders):</strong>
+            <p>Incluye:</p>
+            <ul>
+              <li>Clientes</li>
+              <li>Usuarios</li>
+              <li>Proveedores</li>
+              <li>Socios</li>
+              <li>Internos (otros equipos, liderazgo)</li>
+            </ul>
+            <p>La gestión de relaciones no se limita al cliente: se trata de crear confianza y colaboración con todos
+              los involucrados en el ciclo de valor.</p>
+          </li>
+          <li><strong>2. Confianza y transparencia:</strong>
+            <p>La confianza es el pilar central de esta práctica. Se busca una relación en la que las expectativas estén
+              claras, y la comunicación sea honesta y abierta.</p>
+          </li>
+          <li><strong>3. Comunicación bidireccional:</strong>
+            <p>Se fomenta el diálogo constante, no solo el reporte de problemas o avances. La organización debe escuchar
+              activamente, no solo hablar.</p>
+          </li>
+          <li><strong>4. Satisfacción del cliente:</strong>
+            <p>Se monitorea y se gestiona la percepción del valor entregado. Esto se logra entendiendo lo que el cliente
+              necesita realmente (más allá de lo que pide).</p>
+          </li>
+          <li><strong>5. Relaciones estratégicas y operativas:</strong>
+            <p>
+              <strong>Relaciones estratégicas:</strong> con alta dirección, clientes clave, socios comerciales.<br>
+              <strong>Relaciones operativas:</strong> con usuarios finales, proveedores, soporte técnico, etc.
+            </p>
+            <p>Ambas son importantes, pero requieren diferentes enfoques y niveles de gestión.</p>
+          </li>
+        </ul>
+
+        <h3>📌 Ejemplo práctico:</h3>
+        <p>Supón que una empresa de software tiene un cliente clave. La práctica de gestión de relaciones se encargará
+          de:</p>
+        <ul>
+          <li>Asegurar que se conozcan sus expectativas.</li>
+          <li>Establecer canales de comunicación adecuados.</li>
+          <li>Organizar reuniones de seguimiento.</li>
+          <li>Medir su satisfacción.</li>
+          <li>Actuar en base a sus comentarios para mejorar la relación y el servicio entregado.</li>
+        </ul>
+
+        <h3>✨ En resumen:</h3>
+        <blockquote style="background-color: #eef3fa; border-left: 6px solid #004080; padding: 10px; margin: 10px 0;">
+          Gestión de relaciones ≠ solo soporte al cliente.<br>
+          Es una práctica estratégica que busca fortalecer vínculos humanos y organizacionales para garantizar el éxito
+          a largo plazo.<br>
+          Aplica tanto dentro como fuera de la organización.
+        </blockquote>
+      </div>
+
+      <img src="./img/Principios clave de itil.png" alt="">
+
     </div>
 
-    <div id="dimension1" class="tab-content active">
-
-
-     
+    <div id="dimension7" class="tab-content">
       <div class="box">
-  <h2>🤝 ¿Qué es la Gestión de Relaciones en ITIL v4?</h2>
-  <h3>🎯 Propósito:</h3>
-  <p>Asegurar que la organización entiende, gestiona y mejora sus relaciones con las partes interesadas adecuadas, tanto internas como externas, para facilitar el valor continuo a través de servicios y colaboraciones eficaces.</p>
-  
-  <h3>🔑 Conceptos clave:</h3>
-  <ul>
-    <li><strong>1. Partes interesadas (Stakeholders):</strong>
-      <p>Incluye:</p>
-      <ul>
-        <li>Clientes</li>
-        <li>Usuarios</li>
-        <li>Proveedores</li>
-        <li>Socios</li>
-        <li>Internos (otros equipos, liderazgo)</li>
-      </ul>
-      <p>La gestión de relaciones no se limita al cliente: se trata de crear confianza y colaboración con todos los involucrados en el ciclo de valor.</p>
-    </li>
-    <li><strong>2. Confianza y transparencia:</strong>
-      <p>La confianza es el pilar central de esta práctica. Se busca una relación en la que las expectativas estén claras, y la comunicación sea honesta y abierta.</p>
-    </li>
-    <li><strong>3. Comunicación bidireccional:</strong>
-      <p>Se fomenta el diálogo constante, no solo el reporte de problemas o avances. La organización debe escuchar activamente, no solo hablar.</p>
-    </li>
-    <li><strong>4. Satisfacción del cliente:</strong>
-      <p>Se monitorea y se gestiona la percepción del valor entregado. Esto se logra entendiendo lo que el cliente necesita realmente (más allá de lo que pide).</p>
-    </li>
-    <li><strong>5. Relaciones estratégicas y operativas:</strong>
-      <p>
-        <strong>Relaciones estratégicas:</strong> con alta dirección, clientes clave, socios comerciales.<br>
-        <strong>Relaciones operativas:</strong> con usuarios finales, proveedores, soporte técnico, etc.
-      </p>
-      <p>Ambas son importantes, pero requieren diferentes enfoques y niveles de gestión.</p>
-    </li>
-  </ul>
+        <h2>Gestión de Entrega (Deliver & Support)</h2>
+        <h3>🎯 Propósito:</h3>
+        <p>
+          El propósito de la Gestión de Entrega (Deliver & Support) es asegurar que los servicios lleguen a los usuarios
+          con la calidad y continuidad requeridas, resolver incidentes y solicitudes de forma ágil para minimizar
+          interrupciones, y mantener altos niveles de satisfacción a través de la supervisión constante del desempeño y
+          el cumplimiento de los acuerdos de nivel de servicio.
+        </p>
+        <h3>🔑 Conceptos clave:</h3>
+        <ul>
+          <li><strong>Gestión de Incidentes (Incident Management):</strong>
+            <p>
+              Restaura el servicio ante interrupciones o fallas de la forma más rápida posible, reduciendo el impacto en
+              el negocio y en los usuarios.
+            </p>
+          </li>
+          <li><strong>Gestión de Solicitudes de Servicio (Service Request Management):</strong>
+            <p>
+              Procesa y satisface peticiones comunes de los usuarios (información, accesos, cambios simples, etc.),
+              utilizando canales y procedimientos definidos.
+            </p>
+          </li>
+          <li><strong>Gestión de Problemas (Problem Management):</strong>
+            <p>
+              Identifica causas raíz de incidentes y propone soluciones o mitigaciones permanentes para evitar
+              recurrencias.
+            </p>
+          </li>
+          <li><strong>Gestión de Niveles de Servicio (Service Level Management):</strong>
+            <p>
+              Establece, monitorea y revisa indicadores (SLAs) que miden la calidad y efectividad de la entrega de
+              servicios.
+            </p>
+          </li>
+          <li><strong>Service Desk:</strong>
+            <p>
+              Actúa como único punto de contacto (SPOC) para incidentes y solicitudes, coordinando la comunicación con
+              el usuario y otras áreas de TI.
+            </p>
+          </li>
+          <li><strong>Monitoreo y Gestión de Eventos (Monitoring and Event Management):</strong>
+            <p>
+              Detecta alertas y eventos que pueden indicar fallas o mejoras, permitiendo una acción preventiva o
+              correctiva a tiempo.
+            </p>
+          </li>
+        </ul>
+        <h3>📌 Ejemplo práctico:</h3>
+        <p>
+          Una empresa de comercio electrónico (e-commerce) lanza una nueva funcionalidad en su plataforma para que los
+          clientes puedan rastrear sus pedidos en tiempo real.
+        </p>
+        <ul>
+          <li>Activación y despliegue</li>
+          <li>Monitoreo en tiempo real</li>
+          <li>Gestión de Incidentes</li>
+          <li>Gestión de Problemas</li>
+          <li>Gestión de Solicitudes de Servicio</li>
+        </ul>
+      </div>
+    </div>
 
-  <h3>📌 Ejemplo práctico:</h3>
-  <p>Supón que una empresa de software tiene un cliente clave. La práctica de gestión de relaciones se encargará de:</p>
-  <ul>
-    <li>Asegurar que se conozcan sus expectativas.</li>
-    <li>Establecer canales de comunicación adecuados.</li>
-    <li>Organizar reuniones de seguimiento.</li>
-    <li>Medir su satisfacción.</li>
-    <li>Actuar en base a sus comentarios para mejorar la relación y el servicio entregado.</li>
-  </ul>
 
-  <h3>✨ En resumen:</h3>
-  <blockquote style="background-color: #eef3fa; border-left: 6px solid #004080; padding: 10px; margin: 10px 0;">
-    Gestión de relaciones ≠ solo soporte al cliente.<br>
-    Es una práctica estratégica que busca fortalecer vínculos humanos y organizacionales para garantizar el éxito a largo plazo.<br>
-    Aplica tanto dentro como fuera de la organización.
-  </blockquote>
-</div>
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700">
-  <!-- Fondo general -->
-  <rect width="900" height="700" fill="#f8f9fa" rx="10" ry="10"/>
-  
-  <!-- Título principal -->
-  <text x="450" y="50" font-family="Arial" font-size="30" font-weight="bold" text-anchor="middle" fill="#333">Principios Clave de ITIL v4</text>
-  <text x="450" y="80" font-family="Arial" font-size="20" text-anchor="middle" fill="#555">Gestión de Relaciones y Valor</text>
-  
-  <!-- Círculo central - Valor -->
-  <circle cx="450" cy="350" r="100" fill="#5b9bd5" fill-opacity="0.2" stroke="#5b9bd5" stroke-width="3"/>
-  <text x="450" y="340" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">VALOR</text>
-  <text x="450" y="370" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">Objetivo central</text>
-  <text x="450" y="390" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">de ITIL v4</text>
-  
-  <!-- Principio 1: Partes interesadas -->
-  <rect x="50" y="120" width="280" height="200" rx="15" ry="15" fill="#70ad47" fill-opacity="0.2" stroke="#70ad47" stroke-width="3"/>
-  <text x="190" y="150" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#333">1. Partes interesadas</text>
-  <text x="190" y="180" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">• Clientes</text>
-  <text x="190" y="205" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">• Usuarios</text>
-  <text x="190" y="230" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">• Proveedores</text>
-  <text x="190" y="255" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">• Socios</text>
-  <text x="190" y="280" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">• Internos (equipos, liderazgo)</text>
-  <text x="190" y="305" font-family="Arial" font-size="14" font-style="italic" text-anchor="middle" fill="#555">No limitado al cliente: busca crear</text>
-  <text x="190" y="325" font-family="Arial" font-size="14" font-style="italic" text-anchor="middle" fill="#555">confianza y colaboración con todos</text>
-  
-  <!-- Principio 2: Confianza y transparencia -->
-  <rect x="570" y="120" width="280" height="200" rx="15" ry="15" fill="#ed7d31" fill-opacity="0.2" stroke="#ed7d31" stroke-width="3"/>
-  <text x="710" y="150" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#333">2. Confianza y transparencia</text>
-  <text x="710" y="190" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">• La confianza es el pilar central</text>
-  <text x="710" y="215" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">  de esta práctica</text>
-  <text x="710" y="255" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">• Expectativas claras</text>
-  <text x="710" y="295" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">• Comunicación honesta y abierta</text>
-  
-  <!-- Principio 3: Comunicación bidireccional -->
-  <rect x="50" y="430" width="280" height="200" rx="15" ry="15" fill="#ffc000" fill-opacity="0.2" stroke="#ffc000" stroke-width="3"/>
-  <text x="190" y="460" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#333">3. Comunicación bidireccional</text>
-  <text x="190" y="500" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">• Diálogo constante, no solo</text>
-  <text x="190" y="525" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">  reportes de problemas</text>
-  <text x="190" y="565" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">• Escucha activa por parte</text>
-  <text x="190" y="590" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">  de la organización</text>
-  
-  <!-- Principio 4: Satisfacción del cliente -->
-  <rect x="570" y="430" width="280" height="200" rx="15" ry="15" fill="#4472c4" fill-opacity="0.2" stroke="#4472c4" stroke-width="3"/>
-  <text x="710" y="460" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#333">4. Satisfacción del cliente</text>
-  <text x="710" y="500" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">• Monitoreo y gestión de la</text>
-  <text x="710" y="525" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">  percepción del valor entregado</text>
-  <text x="710" y="565" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">• Entender lo que el cliente</text>
-  <text x="710" y="590" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">  necesita realmente</text>
-  
-  <!-- Principio 5: Relaciones estratégicas y operativas -->
-  <rect x="310" y="500" width="280" height="180" rx="15" ry="15" fill="#9b59b6" fill-opacity="0.2" stroke="#9b59b6" stroke-width="3"/>
-  <text x="450" y="530" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#333">5. Relaciones estratégicas</text>
-  <text x="450" y="555" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#333">y operativas</text>
-  <text x="450" y="590" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">• Estratégicas: alta dirección,</text>
-  <text x="450" y="615" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">  clientes clave, socios</text>
-  <text x="450" y="645" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">• Operativas: usuarios, proveedores,</text>
-  <text x="450" y="670" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">  soporte técnico</text>
-  
-  <!-- Líneas conectoras con puntas de flecha -->
-  <line x1="190" y1="330" x2="370" y2="350" stroke="#70ad47" stroke-width="3" marker-end="url(#arrow-green)"/>
-  <line x1="710" y1="320" x2="530" y2="350" stroke="#ed7d31" stroke-width="3" marker-end="url(#arrow-orange)"/>
-  <line x1="190" y1="430" x2="370" y2="380" stroke="#ffc000" stroke-width="3" marker-end="url(#arrow-yellow)"/>
-  <line x1="710" y1="430" x2="530" y2="380" stroke="#4472c4" stroke-width="3" marker-end="url(#arrow-blue)"/>
-  <line x1="450" y1="500" x2="450" y2="450" stroke="#9b59b6" stroke-width="3" marker-end="url(#arrow-purple)"/>
-  
-  <!-- Definiciones de marcadores de flecha -->
-  <defs>
-    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L0,6 L9,3 z" fill="#70ad47"/>
-    </marker>
-    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L0,6 L9,3 z" fill="#ed7d31"/>
-    </marker>
-    <marker id="arrow-yellow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L0,6 L9,3 z" fill="#ffc000"/>
-    </marker>
-    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L0,6 L9,3 z" fill="#4472c4"/>
-    </marker>
-    <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L0,6 L9,3 z" fill="#9b59b6"/>
-    </marker>
-  </defs>
-  
-  <!-- Círculos indicadores -->
-  <circle cx="125" y="150" r="18" fill="#70ad47" fill-opacity="0.7"/>
-  <text x="125" y="156" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#fff">1</text>
-  
-  <circle cx="645" y="150" r="18" fill="#ed7d31" fill-opacity="0.7"/>
-  <text x="645" y="156" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#fff">2</text>
-  
-  <circle cx="125" y="460" r="18" fill="#ffc000" fill-opacity="0.7"/>
-  <text x="125" y="466" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#fff">3</text>
-  
-  <circle cx="645" y="460" r="18" fill="#4472c4" fill-opacity="0.7"/>
-  <text x="645" y="466" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#fff">4</text>
-  
-  <circle cx="385" y="530" r="18" fill="#9b59b6" fill-opacity="0.7"/>
-  <text x="385" y="536" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#fff">5</text>
-</svg>
+    <div id="dimension8" class="tab-content">
+      <div class="box">
+        <h2>Gestión de Proveedores (Supplier Management)</h2>
+        <h3>🎯 Propósito:</h3>
+        <p>
+          El propósito de la Gestión de Proveedores es asegurar que los acuerdos y relaciones con los proveedores se
+          establezcan y mantengan de manera que apoyen las necesidades del negocio, fomenten la calidad de los servicios
+          y optimicen los costos y riesgos, garantizando así que todos los proveedores contribuyan eficazmente al valor
+          que se entrega a los clientes.
+        </p>
+        <h3>🔑 Conceptos clave:</h3>
+        <ul>
+          <li><strong>Selección y Contratación:</strong>
+            <p>
+              Identificar, evaluar y negociar con proveedores que cumplan los requisitos de calidad, costo y alcance.
+            </p>
+          </li>
+          <li><strong>Acuerdos de Nivel de Servicio (SLAs):</strong>
+            <p>
+              Definir métricas y expectativas claras para el desempeño, disponibilidad y confiabilidad de los servicios
+              proporcionados por los proveedores.
+            </p>
+          </li>
+          <li><strong>Monitorización del Rendimiento:</strong>
+            <p>
+              Revisar y evaluar periódicamente indicadores clave (KPIs) para asegurar que los proveedores cumplan con
+              los objetivos establecidos.
+            </p>
+          </li>
+          <li><strong>Comunicación y Colaboración:</strong>
+            <p>
+              Mantener un canal de contacto fluido y transparente, facilitando la resolución de problemas y la mejora
+              continua.
+            </p>
+          </li>
+          <li><strong>Gestión de Riesgos:</strong>
+            <p>
+              Identificar y mitigar riesgos relacionados con la dependencia de proveedores y posibles incumplimientos de
+              servicio o calidad.
+            </p>
+          </li>
+          <li><strong>Revisión y Renovación de Contratos:</strong>
+            <p>
+              Analizar periódicamente los resultados obtenidos para tomar decisiones sobre extender, modificar o
+              terminar los acuerdos con los proveedores.
+            </p>
+          </li>
+        </ul>
+        <h3>📌 Ejemplo práctico:</h3>
+        <p>
+          Una empresa de servicios de streaming necesita un proveedor de infraestructura en la nube para alojar su
+          plataforma. Tras una fase de evaluación, eligen a un proveedor de confianza con centros de datos disponibles
+          en las regiones de mayor demanda. Al formalizar el contrato, acuerdan métricas de rendimiento (disponibilidad
+          del 99,9% y tiempos de respuesta máximos), establecen canales de comunicación para reportar incidentes y
+          definen evaluaciones trimestrales para revisar el cumplimiento de los SLAs. Si el proveedor no cumple las
+          metas, la empresa puede renegociar o buscar un nuevo socio, garantizando así un servicio de streaming estable
+          y de alta calidad para sus usuarios.
+        </p>
+      </div>
     </div>
 
   </div>
   <script>
-    
+
     const allButtons = document.querySelectorAll('.tab-button');
     const allContents = document.querySelectorAll('.tab-content');
 
@@ -552,4 +718,5 @@
     }
   </script>
 </body>
+
 </html>
